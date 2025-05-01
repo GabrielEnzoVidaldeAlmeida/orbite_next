@@ -1,0 +1,25 @@
+{
+  "episodes": [
+    {
+      "title": "#129 Luto: como lidar com as finitudes?",
+      "imgUrl": "/images/capdo129.png",
+      "likes":"12.300",
+      "duration": "48min",
+      "date": "12/08/2003"
+    },
+    {
+      "title": "#85 Eu estou tão cansado, mas não pra dizer",
+      "imgUrl": "/images/capdo85.png",
+      "likes":"9.200",
+      "duration": "48min",
+      "date": "12/08/2003"
+    },
+    {
+      "title": "#81 Luta Antimanicomial",
+      "imgUrl": "/images/capdo81.png",
+      "likes":"124.220",
+      "duration": "48min",
+      "date": "12/08/2003"
+    }
+  ]
+}

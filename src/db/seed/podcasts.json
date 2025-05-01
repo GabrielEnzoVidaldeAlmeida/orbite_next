@@ -1,0 +1,40 @@
+{
+  "podcasts": [
+    {
+      "id": "1",
+      "title": "Space Today",
+      "coverImageUrl": "/images/spacetoday.jpg",
+      "followers": "1.800.000",
+      "description": "Space Today traz as últimas notícias, curiosidades e descobertas sobre o universo. Com uma linguagem clara e envolvente, o podcast conecta você ao mundo da astronomia, exploração espacial e ciências afins, sempre com informação de qualidade e paixão pelo cosmos.",
+      "episodes": [
+        { "title": "#129 Luto: como lidar com as finitudes?", "imgUrl": "/images/capdo129.png", "likes":"12.300"  },
+        { "title": "#85 Eu estou tão cansado, mas não pra dizer", "imgUrl": "/images/capdo85.png", "likes":"9.200"  },
+        { "title": "#81 Luta Antimanicomial", "imgUrl": "/images/capdo81.png", "likes":"124.220"  }
+      ]
+    },
+    {
+      "id": "2",
+      "title": "Ciência Ao Pé do Ouvido",
+      "coverImageUrl": "/images/capdo_logo.png",
+      "followers": "99.800",
+      "description": "Ciência Ao Pé Do Ouvido explora o fascinante mundo da ciência de maneira simples e acessível. Cada episódio traz descobertas, curiosidades e histórias inspiradoras, com o objetivo de desmistificar temas complexos e aproximar a ciência do nosso cotidiano.",
+      "episodes": [
+        { "title": "#129 Luto: como lidar com as finitudes?", "imgUrl": "/images/capdo129", "likes":"12.300"  },
+        { "title": "#85 Eu estou tão cansado, mas não pra dizer", "imgUrl": "/images/capdo85", "likes":"9.200"  },
+        { "title": "#81 Luta Antimanicomial", "imgUrl": "/images/capdo81", "likes":"124.220"  }
+      ]
+    },
+    {
+      "id": "3",
+      "title": "Não Inviabilize",
+      "coverImageUrl": "/images/nao_inviabilize.png",
+      "followers": "816.000",
+      "description": "Não Inviabilize traz histórias reais contadas com humor, empatia e sinceridade. Um espaço para refletir, rir e se emocionar com relatos que poderiam ser de qualquer um de nós.",
+      "episodes": [
+        { "title": "MALUCA", "img": "picoleLimao", "likes":"43189"  },
+        { "title": "FORMA", "img": "luzAcesa", "likes":"24331"  },
+        { "title": "PAJARITO", "img": "pimentaOutros", "likes":"84225"  }
+      ]
+    }
+  ]
+}
