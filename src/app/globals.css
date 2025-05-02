@@ -2,6 +2,13 @@
 
 @import "tailwindcss";
 
+/*GLOSSARY:
+  bg: background
+  bd: border
+  pt: primary text
+
+*/
+
 @theme {
   --font-poppins: "Poppins", sans-serif; 
 
@@ -10,7 +17,7 @@
 
   --color-orbite-bd-dark: #6f77c9;
 
-  --color-orbite-p-text-dark: #E6E9F0;
+  --color-orbite-pt-text-dark: #E6E9F0;
   --color-orbite-ct-text-dark: #293647;
 
   --color-orbite-bg-input: #0F0F27;
@@ -27,4 +34,19 @@
 
   --color-orbite-bg-input: #131b30;
   --color-orbite-caret-light: #753bfc;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.5rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fade-in 0.3s ease-out;
 }
