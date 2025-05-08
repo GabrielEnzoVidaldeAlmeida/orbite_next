@@ -8,7 +8,26 @@ import { useEffect, useRef, useState } from "react";
 
 export function NavBar() {
   const [searchBar, setSearchBar] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    function checkIsMobile() {
+      if (window.innerWidth <= 768) {
+        setIsMobile(true);
+      } else {
+        setIsMobile(false);
+      }
+    }
+
+    checkIsMobile();
+
+    window.addEventListener("resize", checkIsMobile);
+
+    return () => {
+      window.removeEventListener("resize", checkIsMobile);
+    };
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -30,7 +49,7 @@ export function NavBar() {
     <nav
       ref={navRef}
       className={clsx(
-        "w-full min-h-20 md:h-32 border-b-1 sm:border-b-2",
+        "w-full min-h-20 md:h-30 border-b-1 sm:border-b-2",
         searchBar
           ? "flex justify-center items-center"
           : "flex items-center justify-between",
@@ -38,22 +57,24 @@ export function NavBar() {
         "dark:border-b-orbite-bd-dark dark:text-orbite-pt-text-dark"
       )}
     >
-      <div className={clsx(searchBar ? "w-full max-w-xl px-4" : "flex-1")}>
+      <div
+        className={clsx(searchBar ? "w-full px-4" : "flex-1 flex items-center")}
+      >
         {!searchBar && (
-          <Link href="/">
+          <Link href="/" className="inline-block">
             <Image
               src="/images/logo.png"
               alt="logo"
               width="80"
               height="80"
-              className="sm:w-32"
+              className="sm:w-30"
               priority
             />
           </Link>
         )}
 
         {searchBar && (
-          <div className="w-full flex items-center gap-5">
+          <div className="w-full flex items-center gap-3">
             <input
               type="text"
               placeholder="O que você procura?"
@@ -64,72 +85,47 @@ export function NavBar() {
         )}
       </div>
 
-      {!searchBar && (
+      {!searchBar && isMobile && (
         <div className="flex gap-4 mr-4">
           <button onClick={() => setSearchBar(true)}>
-            <Search className="w-5 h-5 cursor-pointer" />
+            <Search className="w-5 h-5 sm:w-6 sm:h-6 cursor-pointer" />
           </button>
-          <strong className="flex items-center gap-2 text-sm">Entrar</strong>
+          <strong className="flex items-center gap-2 text-sm sm:text-xl">
+            Entrar
+          </strong>
+        </div>
+      )}
+
+      {!isMobile && (
+        <div className="flex items-center mr-8 gap-8">
+          <Link href="#">
+            <strong className="text-xl">Categorias</strong>
+          </Link>
+
+          <input
+            type="text"
+            placeholder="O que você procura?"
+            className={clsx(
+              " px-2 py-2 border-2 rounded outline-0",
+              "border-orbite-bd-light caret-orbite-caret-light bg-orbite-bg-dark text-orbite-ct-text-light",
+              "dark:border-orbite-bd-dark dark:caret-orbite-caret-dark"
+            )}
+          />
+
+          <Link href="#">Entrar</Link>
+
+          <Link
+            href="#"
+            className={clsx(
+              "border-2 rounded-md p-2 transition",
+              "border-orbite-bd-light hover:text-orbite-ct-text-light hover:bg-orbite-caret-light hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-light)]",
+              "dark:border-orbite-bd-dark dark:hover:border-orbite-bd-light dark:hover:text-orbite-ct-text-dark dark:hover:bg-orbite-caret-dark dark:hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-dark)]"
+            )}
+          >
+            Cadastrar-se
+          </Link>
         </div>
       )}
     </nav>
-
-    // return (
-    //   <nav className='flex items-center justify-between w-full min-h-20 md:h-32 border-b-2 border-orbite-bd-light  dark:border-b-orbite-bd-dark dark:text-orbite-pt-text-dark'>
-
-    //     {!searchBar && (
-    //       <div className="w-19 sm:w-32 md:w-32">
-    //         <Image
-    //           src={logo}
-    //           alt="Logo"
-    //           className="w-full h-auto"
-    //           priority
-    //         />
-    //       </div>
-    //     )}
-
-    //     <div className='flex justify-center items-center gap-8 mr-8'>
-    //       <strong className='text-xl hidden md:block'>Categorias</strong>
-
-    //       <button onClick={handleSearchBar}>
-    //         <Search className='block sm:hidden' />
-    //       </button>
-
-    //       {!searchBar && (
-    //         <input
-    //         placeholder="O que você procura?"
-    //         className={clsx(
-    //           'block sm:hidden w-full',
-    //           'p-2 border-2 rounded-sm outline-none',
-    //           'border-orbite-bd-light caret-orbite-caret-light placeholder-orbite-ct-text-light bg-orbite-bg-dark text-orbite-ct-text-light',
-    //           'dark:border-orbite-bd-dark dark:caret-orbite-caret-dark dark:placeholder-orbite-pt-text-dark',
-    //           'animate-fade-in')}
-    //       />
-    //       )}
-
-    //       <input
-    //         placeholder="O que você procura?"
-    //         className={clsx(
-    //           'hidden md:block',
-    //           'p-2 border-2 rounded-sm outline-none',
-    //           'border-orbite-bd-light caret-orbite-caret-light placeholder-orbite-ct-text-light bg-orbite-bg-dark text-orbite-ct-text-light',
-    //           'dark:border-orbite-bd-dark dark:caret-orbite-caret-dark dark:placeholder-orbite-pt-text-dark ')}
-    //       />
-
-    //       {searchBar && <Link href="/" >Entrar</Link>}
-    //       <Link
-    //         href="/"
-    //         className={clsx(
-    //           'hidden md:block',
-    //           'border rounded-md p-2 transition',
-    //           'border-orbite-bd-light hover:text-orbite-ct-text-light hover:bg-orbite-caret-light hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-light)]',
-    //           'dark:border-orbite-bd-dark dark:hover:border-orbite-bd-light dark:hover:text-orbite-ct-text-dark dark:hover:bg-orbite-caret-dark dark:hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-dark)]'
-    //         )}
-    //       >
-    //         Cadastrar-se
-    //       </Link>
-    //     </div>
-    //   </nav>
-    // )
   );
 }

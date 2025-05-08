@@ -1,18 +1,9 @@
-import { NavBar } from "@/components/NavBar";
-
 export default function HomePage() {
   return (
-    <div className=" items-center min-h-screen">
-      <header>
-        <NavBar />
-      </header>
+    <div className=" items-center">
       <main className="">
-        <div>
-        </div>
+        <div></div>
       </main>
-      {/* <footer className="">
-        Aqui é um footer
-      </footer> */}
     </div>
   );
 }
