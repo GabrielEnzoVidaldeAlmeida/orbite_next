@@ -10,9 +10,9 @@ export default function HomePage() {
         <div>
         </div>
       </main>
-      <footer className="">
+      {/* <footer className="">
         Aqui é um footer
-      </footer>
+      </footer> */}
     </div>
   );
 }
