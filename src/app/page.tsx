@@ -1,9 +1,7 @@
 export default function HomePage() {
   return (
     <div className=" items-center">
-      <main className="">
-        <div></div>
-      </main>
+      <main className=""></main>
     </div>
   );
 }

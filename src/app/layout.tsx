@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { NavBar } from "@/components/NavBar";
+import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
   title: "Orbite",
@@ -24,7 +25,7 @@ export default function RootLayout({
         </header>
         <main className="flex-1">{children}</main>
 
-        <footer className="bg-red-500">SÓ UM FOOTERZIN BASICO</footer>
+        <Footer />
       </body>
     </html>
   );

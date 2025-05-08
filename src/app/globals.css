@@ -10,30 +10,35 @@
 */
 
 @theme {
-  --font-poppins: "Poppins", sans-serif; 
+  --font-poppins: "Poppins", sans-serif;
 
   /*TEMA DARK*/
   --color-orbite-bg-dark: #131b30;
 
   --color-orbite-bd-dark: #6f77c9;
 
-  --color-orbite-pt-text-dark: #E6E9F0;
+  --color-orbite-pt-text-dark: #e6e9f0;
   --color-orbite-ct-text-dark: #293647;
 
-  --color-orbite-bg-input: #0F0F27;
-  --color-orbite-caret-dark: #FC6101;
+  --color-orbite-bg-input: #0f0f27;
+  --color-orbite-caret-dark: #fc6101;
 
+  --color-orbite-footer-dark: #1d0051;
 
   /*TEMA LIGHT*/
   --color-orbite-bg-light: #d9e0ef;
 
-  --color-orbite-bd-light: #2C2F48;
+  --color-orbite-bd-light: #2c2f48;
 
   --color-orbite-p-text-light: #293647;
-  --color-orbite-ct-text-light: #E6E9F0;
+  --color-orbite-ct-text-light: #e6e9f0;
 
   --color-orbite-bg-input: #131b30;
   --color-orbite-caret-light: #753bfc;
+
+  --color-orbite-footer-light: #3a0da4;
+
+  --color-orbite-links-hover-light: #ae95de;
 }
 
 @keyframes fade-in {
