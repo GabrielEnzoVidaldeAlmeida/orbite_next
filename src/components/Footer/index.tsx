@@ -13,99 +13,101 @@ export default function Footer() {
         "bg-orbite-footer-light border-t-orbite-bd-light text-shadow-orbite-p-text-light"
       )}
     >
-      <div className="flex flex-col gap-6 p-2">
-        <div className="flex flex-col">
-          <strong
-            className={clsx(
-              "mb-1",
-              "dark:text-gray-400",
-              "text-orbite-ct-text-light"
-            )}
-          >
-            Institucional
-          </strong>
-          <div className="flex flex-col gap-3 ">
-            <div>
-              <Link
-                href="#"
-                className={clsx(
-                  "inline-block",
-                  "hover:text-orbite-links-hover-light",
-                  "dark:hover:text-orbite-caret-dark"
-                )}
-              >
-                Sobre nós
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="#"
-                className={clsx(
-                  "inline-block",
-                  "hover:text-orbite-links-hover-light",
-                  "dark:hover:text-orbite-caret-dark"
-                )}
-              >
-                Seu podcast na Orbite
-              </Link>
-            </div>
-            <div>
-              <Link
-                href="#"
-                className={clsx(
-                  "inline-block",
-                  "hover:text-orbite-links-hover-light",
-                  "dark:hover:text-orbite-caret-dark"
-                )}
-              >
-                Aplicativo móvel (em desenvolvimento)
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex flex-col ">
-          <strong
-            className={clsx(
-              "mb-1",
-              "dark:text-gray-400",
-              "text-orbite-ct-text-light"
-            )}
-          >
-            Ajuda
-          </strong>
-          <div>
-            <Link
-              href="#"
+      <div className="flex flex-col md:flex-row gap-6 p-2 md:justify-between md:p-8 lg:py-20 lg:px-28">
+        <div className="flex flex-col md:flex-row gap-6 md:gap-10 ">
+          <div className="flex flex-col">
+            <strong
               className={clsx(
-                "inline-block",
-                "hover:text-orbite-links-hover-light",
-                "dark:hover:text-orbite-caret-dark"
+                "mb-1 sm:text-xl lg:mb-4 lg:text-2xl",
+                "dark:text-gray-400",
+                "text-orbite-ct-text-light"
               )}
             >
-              Suporte
-            </Link>
+              Institucional
+            </strong>
+            <div className="flex flex-col gap-3 ">
+              <div>
+                <Link
+                  href="#"
+                  className={clsx(
+                    "inline-block sm:font-bold lg:text-lg",
+                    "hover:text-orbite-links-hover-light",
+                    "dark:hover:text-orbite-caret-dark"
+                  )}
+                >
+                  Sobre nós
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="#"
+                  className={clsx(
+                    "inline-block sm:font-bold lg:text-lg",
+                    "hover:text-orbite-links-hover-light",
+                    "dark:hover:text-orbite-caret-dark"
+                  )}
+                >
+                  Seu podcast na Orbite
+                </Link>
+              </div>
+              <div>
+                <Link
+                  href="#"
+                  className={clsx(
+                    "inline-block sm:font-bold lg:text-lg",
+                    "hover:text-orbite-links-hover-light",
+                    "dark:hover:text-orbite-caret-dark"
+                  )}
+                >
+                  Aplicativo móvel (em desenvolvimento)
+                </Link>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col ">
+            <strong
+              className={clsx(
+                "mb-1 sm:text-xl lg:mb-4 lg:text-2xl",
+                "dark:text-gray-400",
+                "text-orbite-ct-text-light"
+              )}
+            >
+              Ajuda
+            </strong>
+            <div>
+              <Link
+                href="#"
+                className={clsx(
+                  "inline-block sm:font-bold lg:text-lg",
+                  "hover:text-orbite-links-hover-light",
+                  "dark:hover:text-orbite-caret-dark"
+                )}
+              >
+                Suporte
+              </Link>
+            </div>
           </div>
         </div>
 
         <div>
           <strong
             className={clsx(
-              "mb-1",
+              "flex mb-1 sm:text-xl lg:text-2xl lg:justify-end",
               "dark:text-gray-400",
               "text-orbite-ct-text-light"
             )}
           >
             Redes Sociais
           </strong>
-          <div className="flex gap-2 mt-2">
-            <Link href="#" className="w-9 h-9">
+          <div className="flex gap-2 lg:gap-6 mt-2 md:justify-self-end">
+            <Link href="#" className="w-9 h-9 lg:w-12 lg:h-12">
               <Instagram />
             </Link>
-            <Link href="#" className="w-9 h-9">
+            <Link href="#" className="w-9 h-9 lg:w-12 lg:h-12">
               <X />
             </Link>
-            <Link href="#" className="w-9 h-9">
+            <Link href="#" className="w-9 h-9 lg:w-12 lg:h-12">
               <Facebook />
             </Link>
           </div>
@@ -115,10 +117,10 @@ export default function Footer() {
         className={clsx(
           "w-full border-t-4",
           "border-orbite-bd-light",
-          "dark:border-orbite-bd-dark p-2"
+          "dark:border-orbite-bd-dark p-2 md:px-8 lg:px-28"
         )}
       >
-        <strong>Orbite &copy; 2025</strong>
+        <strong className="sm:text-xl">Orbite &copy; 2025</strong>
       </div>
     </footer>
   );
