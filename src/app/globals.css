@@ -12,7 +12,7 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
 
-  /*TEMA DARK*/
+  /* TEMA DARK */
   --color-orbite-bg-dark: #131b30;
 
   --color-orbite-bd-dark: #6f77c9;
@@ -25,7 +25,7 @@
 
   --color-orbite-footer-dark: #1d0051;
 
-  /*TEMA LIGHT*/
+  /* TEMA LIGHT */
   --color-orbite-bg-light: #d9e0ef;
 
   --color-orbite-bd-light: #2c2f48;
@@ -39,19 +39,10 @@
   --color-orbite-footer-light: #3a0da4;
 
   --color-orbite-links-hover-light: #ae95de;
-}
 
-@keyframes fade-in {
-  from {
-    opacity: 0;
-    transform: translateY(-0.5rem);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+  /* LOGIN */
 
-.animate-fade-in {
-  animation: fade-in 0.3s ease-out;
+  /* bg-gradient-to-r from-blue-500 to-green-500 */
+  --color-orbite-login-bg-1: #120b45;
+  --color-orbite-login-bg-2: #0b0f1a;
 }
