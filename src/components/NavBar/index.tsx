@@ -11,6 +11,9 @@ export function NavBar() {
   const [isMobile, setIsMobile] = useState(false);
   const navRef = useRef<HTMLElement>(null);
 
+  const linkLogin = "/login";
+  const linkRegister = "/register";
+
   useEffect(() => {
     function checkIsMobile() {
       if (window.innerWidth <= 768) {
@@ -112,10 +115,10 @@ export function NavBar() {
             )}
           />
 
-          <Link href="#">Entrar</Link>
+          <Link href={linkLogin}>Entrar</Link>
 
           <Link
-            href="#"
+            href={linkRegister}
             className={clsx(
               "border-2 rounded-md p-2 transition",
               "border-orbite-bd-light hover:text-orbite-ct-text-light hover:bg-orbite-caret-light hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-light)]",
