@@ -104,7 +104,7 @@ export function NavBar() {
       {!isMobile && (
         <div className="flex items-center mr-8 gap-8">
           <Link href="#">
-            <strong className="text-xl">Categorias</strong>
+            <strong className="text-xl hidden lg:block">Categorias</strong>
           </Link>
 
           <input
