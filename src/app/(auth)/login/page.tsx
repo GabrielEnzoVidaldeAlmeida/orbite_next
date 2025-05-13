@@ -24,7 +24,13 @@ export default function LoginPage() {
       </div>
 
       <div className="sm:w-1/2 flex flex-col justify-center">
-        <h1 className="text-orbite-pt-text-dark font-extrabold text-2xl md:text-3xl md:mb-6 text-center mb-2">
+        <h1
+          className={clsx(
+            "text-orbite-pt-text-dark font-extrabold text-2xl",
+            "md:text-3xl md:mb-6",
+            "text-center mb-2"
+          )}
+        >
           Login
         </h1>
         <form className="flex flex-col gap-6 w-full max-w-sm mx-auto px-4">
@@ -32,7 +38,12 @@ export default function LoginPage() {
           <RegisterInput labelInput="Senha:" type="password" />
           <Link
             href="/"
-            className="bg-link-login text-orbite-pt-text-dark md:text-xl md:h-12 md:w-32 font-bold rounded h-10 w-24 flex items-center justify-center self-center mt-4 text-2sm hover:brightness-75 transition"
+            className={clsx(
+              "bg-link-login text-orbite-pt-text-dark",
+              "flex items-center justify-center self-center h-10 w-24 rounded mt-4",
+              "md:text-xl md:h-12 md:w-32",
+              "font-bold text-2sm hover:brightness-75 transition"
+            )}
           >
             Entrar
           </Link>
@@ -50,7 +61,10 @@ export default function LoginPage() {
 
         <Link
           href="#"
-          className="text-orbite-pt-text-dark justify-center mt-4 underline hover:text-orbite-caret-dark self-center"
+          className={clsx(
+            "text-orbite-pt-text-dark hover:text-orbite-caret-dark",
+            " mt-4 underline self-center justify-center "
+          )}
         >
           Esqueceu a senha?
         </Link>
