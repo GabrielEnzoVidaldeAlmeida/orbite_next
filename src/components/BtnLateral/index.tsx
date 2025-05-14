@@ -3,7 +3,7 @@ import { Menu } from "lucide-react";
 
 export default function BtnLateral() {
   return (
-    <button className="hover:brightness-75 m-5 transition cursor-pointer">
+    <button className="hover:brightness-75 mt-4 ml-3 transition cursor-pointer">
       <Menu
         className={clsx(
           "text-black bg-orbite-caret-light dark:bg-orbite-caret-dark",
