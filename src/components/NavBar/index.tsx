@@ -81,7 +81,11 @@ export function NavBar() {
             <input
               type="text"
               placeholder="O que você procura?"
-              className="w-full px-4 py-2 border rounded"
+              className={clsx(
+                "w-full px-4 py-2 border rounded outline-0",
+                "border-orbite-bd-light caret-orbite-caret-light bg-orbite-bg-dark text-orbite-ct-text-light",
+                "dark:border-orbite-bd-dark dark:caret-orbite-caret-dark"
+              )}
             />
             <SearchIcon />
           </div>

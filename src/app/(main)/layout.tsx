@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "../globals.css";
 import { NavBar } from "@/components/NavBar";
 import Footer from "@/components/Footer";
+import BtnLateral from "@/components/BtnLateral";
 
 export const metadata: Metadata = {
   title: "Orbite",
@@ -22,6 +23,7 @@ export default function RootLayout({
       >
         <header>
           <NavBar />
+          <BtnLateral />
         </header>
         <main className="flex-1">{children}</main>
 
