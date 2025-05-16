@@ -39,7 +39,7 @@ export default function LoginPage() {
           <Link
             href="/"
             className={clsx(
-              "bg-link-login text-orbite-pt-text-dark",
+              "bg-orbite-caret-dark text-orbite-pt-text-dark",
               "flex items-center justify-center self-center h-10 w-24 rounded mt-4",
               "md:text-xl md:h-12 md:w-32",
               "font-bold text-2sm hover:brightness-75 transition"

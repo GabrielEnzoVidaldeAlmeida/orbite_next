@@ -1,10 +1,26 @@
 import clsx from "clsx";
-import { Menu } from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-export default function BtnLateral() {
+type BtnLateralProps = {
+  onClick: () => void;
+  icon: LucideIcon;
+  className?: string;
+};
+
+export default function BtnLateral({
+  onClick,
+  icon: Icon,
+  className,
+}: BtnLateralProps) {
   return (
-    <button className="hover:brightness-75 mt-4 ml-3 transition cursor-pointer">
-      <Menu
+    <button
+      onClick={onClick}
+      className={clsx(
+        "hover:brightness-75  transition cursor-pointer",
+        className
+      )}
+    >
+      <Icon
         className={clsx(
           "text-black bg-orbite-caret-light dark:bg-orbite-caret-dark",
           "border-1 border-orbite-bd-light dark:border-orbite-bd-dark",

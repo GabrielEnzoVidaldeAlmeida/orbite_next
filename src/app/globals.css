@@ -25,6 +25,8 @@
 
   --color-orbite-footer-dark: #1d0051;
 
+  --color-orbite-bg-lateral-dark: #1f1c4f;
+
   /* TEMA LIGHT */
   --color-orbite-bg-light: #d9e0ef;
 
@@ -40,6 +42,8 @@
   --color-orbite-footer-light: #301ba7;
 
   --color-orbite-links-hover-light: #ae95de;
+
+  --color-orbite-bg-lateral-light: #99a5c8;
 
   /* LOGIN */
 
