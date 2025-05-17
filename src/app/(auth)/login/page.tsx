@@ -1,5 +1,7 @@
 import RegisterBtn from "@/components/RegisterBtn";
 import RegisterInput from "@/components/RegisterInput";
+import RegisterTitle from "@/components/RegisterTitle";
+import VerifyAccountRegister from "@/components/VerifyAccountRegister";
 import clsx from "clsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -25,15 +27,7 @@ export default function LoginPage() {
       </div>
 
       <div className="sm:w-1/2 flex flex-col justify-center">
-        <h1
-          className={clsx(
-            "text-orbite-pt-text-dark font-extrabold text-2xl",
-            "md:text-3xl md:mb-6",
-            "text-center mb-2"
-          )}
-        >
-          Login
-        </h1>
+        <RegisterTitle title="Login" />
         <form className="flex flex-col gap-6 w-full max-w-sm mx-auto px-4">
           <RegisterInput labelInput="Nome:" type="text" />
           <RegisterInput labelInput="Senha:" type="password" />
@@ -46,15 +40,11 @@ export default function LoginPage() {
           />
         </form>
 
-        <div className="flex gap-1 mt-6 justify-center font-bold">
-          <p className="text-orbite-pt-text-dark">Não tem uma conta?</p>
-          <Link
-            href="/register"
-            className="text-link-login hover:text-orbite-caret-dark transition"
-          >
-            Criar conta
-          </Link>
-        </div>
+        <VerifyAccountRegister
+          labelLink="Não tem uma conta?"
+          linkProps={{ href: "/register" }}
+          linkText="Criar conta"
+        />
 
         <Link
           href="#"

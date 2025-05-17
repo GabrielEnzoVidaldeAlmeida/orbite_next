@@ -33,7 +33,11 @@ export default function MenuLateral() {
 
           <div
             ref={menuRef}
-            className="absolute z-10 top-0 min-h-200 w-60 sm:w-90 md:w-100 dark:bg-orbite-bg-lateral-dark bg-orbite-bg-lateral-light dark:border-orbite-bd-dark"
+            className={clsx(
+              "dark:bg-orbite-bg-lateral-dark bg-orbite-bg-lateral-light dark:border-orbite-bd-dark",
+              "absolute z-10 top-0 min-h-200 w-60",
+              "sm:w-90 md:w-100"
+            )}
           >
             <div className="flex justify-end p-3 mb-2">
               <BtnLateral
@@ -42,7 +46,12 @@ export default function MenuLateral() {
               />
             </div>
 
-            <div className="flex flex-col items-center text-center text-orbite-p-text-light dark:text-orbite-pt-text-dark">
+            <div
+              className={clsx(
+                "text-orbite-p-text-light dark:text-orbite-pt-text-dark",
+                "flex flex-col items-center text-center"
+              )}
+            >
               <strong className="text-lg sm:text-2xl">Seu Universo</strong>
               <p className="p-3 sm:text-lg">
                 Faça login ou cadastre-se para acessar seu universo
@@ -52,7 +61,7 @@ export default function MenuLateral() {
                 <RegisterBtn
                   linkProps={{
                     href: "/login",
-                    className: "sm:text-lg sm:w-28 sm:h-12",
+                    className: "w-24 sm:text-lg sm:w-28 sm:h-12",
                   }}
                   text="Entrar"
                 />

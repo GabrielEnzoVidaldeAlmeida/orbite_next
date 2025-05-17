@@ -11,9 +11,10 @@ export default function LinkFooter({ text, linkProps }: LinkFooterProps) {
     <Link
       {...linkProps}
       className={clsx(
-        "inline-block font-bold lg:text-lg",
-        "hover:text-orbite-links-hover-light",
         "dark:hover:text-orbite-caret-dark",
+        "hover:text-orbite-links-hover-light",
+        "inline-block font-bold lg:text-lg",
+
         linkProps.className
       )}
     >

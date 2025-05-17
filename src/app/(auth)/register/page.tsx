@@ -1,8 +1,9 @@
 import RegisterBtn from "@/components/RegisterBtn";
 import RegisterInput from "@/components/RegisterInput";
+import RegisterTitle from "@/components/RegisterTitle";
+import VerifyAccountRegister from "@/components/VerifyAccountRegister";
 import clsx from "clsx";
 import Image from "next/image";
-import Link from "next/link";
 
 export default function RegisterPage() {
   return (
@@ -25,15 +26,7 @@ export default function RegisterPage() {
       </div>
 
       <div className="sm:w-1/2 flex flex-col justify-center">
-        <h1
-          className={clsx(
-            "text-orbite-pt-text-dark font-extrabold text-2xl",
-            "md:text-3xl md:mb-6",
-            "text-center mb-2"
-          )}
-        >
-          Cadastro
-        </h1>
+        <RegisterTitle title="Cadastro" />
         <form className="flex flex-col gap-6 w-full max-w-sm mx-auto px-4">
           <RegisterInput labelInput="Nome:" type="text" />
           <RegisterInput labelInput="E-mail:" type="email" />
@@ -42,16 +35,11 @@ export default function RegisterPage() {
 
           <RegisterBtn linkProps={{ href: "/" }} text="Cadastrar" />
         </form>
-
-        <div className="flex gap-1 mt-6 justify-center font-bold">
-          <p className="text-orbite-pt-text-dark">Já tem uma conta?</p>
-          <Link
-            href="/login"
-            className="text-link-login hover:text-orbite-caret-dark transition"
-          >
-            Entrar
-          </Link>
-        </div>
+        <VerifyAccountRegister
+          labelLink="Já tem uma conta?"
+          linkProps={{ href: "/login" }}
+          linkText="Entrar"
+        />
       </div>
     </div>
   );

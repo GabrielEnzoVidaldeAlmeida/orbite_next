@@ -26,9 +26,9 @@ export default function RegisterInput({
           {...rest}
           type={inputType}
           className={clsx(
-            "h-8 py-4 px-2 pr-16 border-2 outline-0 md:py-5 w-full",
-            "border-b-orbite-caret-dark border-transparent",
             "text-orbite-pt-text-dark text-sm",
+            "border-b-orbite-caret-dark border-transparent",
+            "h-8 py-4 px-2 pr-16 border-2 outline-0 md:py-5 w-full",
             "focus:rounded-md focus:border-orbite-caret-light focus:border-2",
             "transition-all duration-200 ",
             className

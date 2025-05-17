@@ -10,9 +10,9 @@ export default function Footer() {
   return (
     <footer
       className={clsx(
-        "border-t-2",
-        " dark:bg-orbite-footer-dark dark:border-t-orbite-bd-dark dark:text-orbite-pt-text-dark",
-        "bg-orbite-footer-light border-t-orbite-bd-light text-shadow-orbite-p-text-light"
+        "dark:bg-orbite-footer-dark dark:border-t-orbite-bd-dark dark:text-orbite-pt-text-dark",
+        "bg-orbite-footer-light border-t-orbite-bd-light text-shadow-orbite-p-text-light",
+        "border-t-2"
       )}
     >
       <div
@@ -69,9 +69,9 @@ export default function Footer() {
       </div>
       <div
         className={clsx(
-          "w-full border-t-4",
           "border-orbite-bd-light",
-          "dark:border-orbite-bd-dark p-2 md:px-8 lg:px-28"
+          "dark:border-orbite-bd-dark p-2 md:px-8 lg:px-28",
+          "w-full border-t-4"
         )}
       >
         <strong className="sm:text-xl">Orbite &copy; 2025</strong>

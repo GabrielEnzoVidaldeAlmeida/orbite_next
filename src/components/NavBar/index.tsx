@@ -52,12 +52,12 @@ export function NavBar() {
     <nav
       ref={navRef}
       className={clsx(
+        "border-orbite-bd-light",
+        "dark:border-b-orbite-bd-dark dark:text-orbite-pt-text-dark",
         "w-full min-h-20 md:h-30 border-b-1 sm:border-b-2",
         searchBar
           ? "flex justify-center items-center"
-          : "flex items-center justify-between",
-        "border-orbite-bd-light",
-        "dark:border-b-orbite-bd-dark dark:text-orbite-pt-text-dark"
+          : "flex items-center justify-between"
       )}
     >
       <div
@@ -82,9 +82,9 @@ export function NavBar() {
               type="text"
               placeholder="O que você procura?"
               className={clsx(
-                "w-full px-4 py-2 border rounded outline-0",
                 "border-orbite-bd-light caret-orbite-caret-light bg-orbite-bg-dark text-orbite-ct-text-light",
-                "dark:border-orbite-bd-dark dark:caret-orbite-caret-dark"
+                "dark:border-orbite-bd-dark dark:caret-orbite-caret-dark",
+                "w-full px-4 py-2 border rounded outline-0"
               )}
             />
             <SearchIcon />
@@ -115,9 +115,9 @@ export function NavBar() {
             type="text"
             placeholder="O que você procura?"
             className={clsx(
-              " px-2 py-2 border-2 rounded outline-0",
               "border-orbite-bd-light caret-orbite-caret-light bg-orbite-bg-dark text-orbite-ct-text-light",
-              "dark:border-orbite-bd-dark dark:caret-orbite-caret-dark"
+              "dark:border-orbite-bd-dark dark:caret-orbite-caret-dark",
+              "px-2 py-2 border-2 rounded outline-0"
             )}
           />
 
@@ -126,9 +126,9 @@ export function NavBar() {
           <Link
             href={linkRegister}
             className={clsx(
-              "border-2 rounded-md p-2 transition",
               "border-orbite-bd-light hover:text-orbite-ct-text-light hover:bg-orbite-caret-light hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-light)]",
-              "dark:border-orbite-bd-dark dark:hover:border-orbite-bd-light dark:hover:text-orbite-ct-text-dark dark:hover:bg-orbite-caret-dark dark:hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-dark)]"
+              "dark:border-orbite-bd-dark dark:hover:border-orbite-bd-light dark:hover:text-orbite-ct-text-dark dark:hover:bg-orbite-caret-dark dark:hover:shadow-[0_0_1rem_0_var(--color-orbite-caret-dark)]",
+              "border-2 rounded-md p-2 transition"
             )}
           >
             Cadastrar-se
