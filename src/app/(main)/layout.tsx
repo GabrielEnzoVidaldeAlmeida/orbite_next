@@ -3,6 +3,7 @@ import "../globals.css";
 import { NavBar } from "@/components/NavBar";
 import Footer from "@/components/Footer";
 import MenuLateral from "@/components/MenuLateral";
+import MainContainer from "@/layout/MainContainer";
 
 export const metadata: Metadata = {
   title: "Orbite",
@@ -26,7 +27,9 @@ export default function RootLayout({
         </header>
         <div className="relative w-full flex flex-1">
           <MenuLateral />
-          <main className="relative z-0">{children}</main>
+          <MainContainer>
+            <main className="relative z-0">{children}</main>
+          </MainContainer>
         </div>
 
         <Footer />

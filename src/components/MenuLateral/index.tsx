@@ -19,13 +19,14 @@ export default function MenuLateral() {
 
   return (
     <div>
-      {!showMenu && (
-        <BtnLateral
-          onClick={() => setShowMenu((prev) => !prev)}
-          icon={Menu}
-          className="mt-4 ml-3"
-        />
-      )}
+      <BtnLateral
+        onClick={() => setShowMenu((prev) => !prev)}
+        icon={Menu}
+        className={clsx(
+          "mt-5 ml-5 transition-opacity duration-300",
+          showMenu ? "opacity-0 pointer-events-none" : "opacity-100"
+        )}
+      />
 
       {showMenu && (
         <>
@@ -35,7 +36,7 @@ export default function MenuLateral() {
             ref={menuRef}
             className={clsx(
               "dark:bg-orbite-bg-lateral-dark bg-orbite-bg-lateral-light dark:border-orbite-bd-dark",
-              "absolute z-10 top-0 min-h-200 w-60",
+              "absolute z-10 top-0 min-h-200 h-full w-60",
               "sm:w-90 md:w-100"
             )}
           >
