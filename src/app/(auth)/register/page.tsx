@@ -1,3 +1,4 @@
+import RegisterBtn from "@/components/RegisterBtn";
 import RegisterInput from "@/components/RegisterInput";
 import clsx from "clsx";
 import Image from "next/image";
@@ -38,17 +39,8 @@ export default function RegisterPage() {
           <RegisterInput labelInput="E-mail:" type="email" />
           <RegisterInput labelInput="Senha:" type="password" />
           <RegisterInput labelInput="Confirme sua senha:" type="password" />
-          <Link
-            href="/"
-            className={clsx(
-              "bg-orbite-caret-dark text-orbite-pt-text-dark",
-              "flex items-center justify-center self-center h-10 w-24 rounded mt-4",
-              "md:text-xl md:h-12 md:w-32",
-              "font-bold text-2sm hover:brightness-75 transition"
-            )}
-          >
-            Cadastrar
-          </Link>
+
+          <RegisterBtn linkProps={{ href: "/" }} text="Cadastrar" />
         </form>
 
         <div className="flex gap-1 mt-6 justify-center font-bold">

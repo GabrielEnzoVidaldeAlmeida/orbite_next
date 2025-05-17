@@ -3,8 +3,8 @@
 import { useEffect, useRef, useState } from "react";
 import BtnLateral from "../BtnLateral";
 import { ArrowLeftFromLineIcon, Menu } from "lucide-react";
-import Link from "next/link";
 import clsx from "clsx";
+import RegisterBtn from "../RegisterBtn";
 
 export default function MenuLateral() {
   const [showMenu, setShowMenu] = useState(false);
@@ -33,7 +33,7 @@ export default function MenuLateral() {
 
           <div
             ref={menuRef}
-            className="absolute z-10 top-0 min-h-200 w-60 sm:w-90 md:w-100 dark:bg-orbite-bg-lateral-dark bg-orbite-bg-lateral-light dark:border-orbite-bd-dark "
+            className="absolute z-10 top-0 min-h-200 w-60 sm:w-90 md:w-100 dark:bg-orbite-bg-lateral-dark bg-orbite-bg-lateral-light dark:border-orbite-bd-dark"
           >
             <div className="flex justify-end p-3 mb-2">
               <BtnLateral
@@ -49,28 +49,21 @@ export default function MenuLateral() {
               </p>
 
               <div className="flex gap-4 sm:gap-8 md:gap-12">
-                <Link
-                  href="/login"
-                  className={clsx(
-                    "dark:bg-orbite-caret-dark bg-orbite-caret-light  text-orbite-pt-text-dark",
-                    "flex items-center justify-center self-center h-10 w-24 rounded mt-4",
-                    "md:text-xl md:h-12 md:w-32",
-                    "font-bold text-2sm hover:brightness-75 transition"
-                  )}
-                >
-                  Entrar
-                </Link>
-                <Link
-                  href="/register"
-                  className={clsx(
-                    "dark:bg-orbite-caret-dark bg-orbite-caret-light text-orbite-pt-text-dark",
-                    "flex items-center justify-center self-center h-10 w-24 rounded mt-4",
-                    "md:text-xl md:h-12 md:w-32",
-                    "font-bold text-2sm hover:brightness-75 transition"
-                  )}
-                >
-                  Cadastro
-                </Link>
+                <RegisterBtn
+                  linkProps={{
+                    href: "/login",
+                    className: "sm:text-lg sm:w-28 sm:h-12",
+                  }}
+                  text="Entrar"
+                />
+
+                <RegisterBtn
+                  linkProps={{
+                    href: "/register",
+                    className: "sm:text-lg sm:w-28 sm:h-12",
+                  }}
+                  text="Cadastro"
+                />
               </div>
             </div>
           </div>
