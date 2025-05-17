@@ -24,9 +24,9 @@ export default function RootLayout({
         <header>
           <NavBar />
         </header>
-        <div className="flex flex-1">
+        <div className="relative w-full flex flex-1">
           <MenuLateral />
-          <main>{children}</main>
+          <main className="relative z-0">{children}</main>
         </div>
 
         <Footer />
